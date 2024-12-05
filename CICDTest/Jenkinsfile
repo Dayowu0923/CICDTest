@@ -1,6 +1,4 @@
 pipeline {
-    agent any
-
     environment {
         DOTNET_VERSION = '8.0' // 根據你的專案目標版本調整
     }
