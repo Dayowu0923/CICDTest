@@ -1,21 +1,27 @@
 pipeline {
     agent any
 
+    environment {
+        DOTNET_VERSION = '8.0' // 根據你的專案目標版本調整
+    }
+
     stages {
         stage('Build') {
             steps {
-                echo 'Building..'
+                echo 'Building...'
+                sh 'dotnet build' // 執行 dotnet build
             }
         }
         stage('Test') {
             steps {
-                echo 'Testing..'
+                echo 'Running Tests...'
+                sh 'dotnet test' // 執行 dotnet test
             }
         }
         stage('Deploy') {
             steps {
-                echo 'Deploying111....'
+                echo 'Deploying...'
+                // 添加你的部署邏輯，例如將結果發佈到伺服器
             }
         }
-    }
-}
+   
