@@ -17,9 +17,9 @@ pipeline {
         stage('Deploy') {
             steps {
                 echo 'Deploying...'
-                // 添加你的部署邏輯，例如將結果發佈到伺服器
+              
             }
         }
-    } // <- 確保這個大括號結束了 stages 區塊
+    }
 
-} // <- 確保這個大括號結束了 pipeline 區塊
+} 
