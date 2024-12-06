@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        dotnetSDK '1111'
+        dotnetsdk  '1111'
     }
     stages {
         stage('Build') {
