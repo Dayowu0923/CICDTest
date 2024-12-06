@@ -1,11 +1,15 @@
 pipeline {
-    agent  any
+    agent any
     stages {
         stage('Build') {
    
             steps {
-                echo 'Building...'
-                bat 'dotnet build' // °õ¦æ dotnet build
+
+                sh "dotnet sonarscanner begin /k:projectkey1"
+sh "dotnet build"
+sh "dotnet sonarscanner end"
+
+               
             }
         }
         stage('Test') {
