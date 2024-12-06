@@ -9,7 +9,7 @@ pipeline {
 sh "dotnet build"
 sh "dotnet sonarscanner end"
 
-               
+                
             }
         }
         stage('Test') {
